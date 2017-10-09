@@ -35,35 +35,29 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">Funding Reddcoin community developer lionzeye's projects</h1>
-			<br />
-			<br />
             <p class="lead">
-              <h3>#1 Permanent Reddcoin Electrum server</h3>
+              <h3>Funding</h3>
+			  <strong>Services:</strong><br />
+			  <ul class="list-group">
+				<li class="list-group-item active">Permanent Electrum server</li>
+				<li class="list-group-item list-group-item-info">Wallet recovery services</li>
+			  </ul>
 			  <br />
-			  Connect: 82.196.12.14:50001 (TCP) or 82.196.12.14:50002 (SSL)<br />
+			  <strong>Development:</strong><br />
+			  <ul class="list-group">
+				<li class="list-group-item active">Tipping with any mobile 'share function'</li>
+				<li class="list-group-item list-group-item-info">Web wallet</li>
+				<li class="list-group-item active">Mobile wallets</li>
+				<li class="list-group-item list-group-item-info">Cross-platform staking (staking contracts)</li>
+				<li class="list-group-item active">Improving the Electrum protocol to better fit our purposes.</li>
+				<li class="list-group-item list-group-item-info">Providing an alternative to Electrum by using block explorer APIs.</li>
+				<li class="list-group-item active">Tipping integration tools for Twitch streamers.</li>
+			  </ul>
 			  <br />
-			  <span style="color:red">$23 per month</span><br />
+			  <br />
 			  <span style="color:orange" id="balance1"></span><br />
 			  Funding address:<br />
 			  <a href="reddcoin:RquoC28kCNXFAT8razxNgWwQgpmRSeoUXg">RquoC28kCNXFAT8razxNgWwQgpmRSeoUXg</a><br />
-			  <br />
-            </p>
-			<p class="lead">
-              <h3>#2 Permanent domain name registration</h3>
-			  <h5>to be used for the Reddcoin Electrum server and additional services</h5>
-			  <br />
-			  <span style="color:red">$14 per year</span><br />
-			  <span style="color:orange" id="balance2"></span><br />
-			  Funding address:<br />
-			  <a href="reddcoin:RnjY3FzpTx6QcaVxCCgaWeR3eJS45ayqkQ">RnjY3FzpTx6QcaVxCCgaWeR3eJS45ayqkQ</a><br />
-			  <br />
-            </p>
-			<p class="lead">
-              <h3>#3 General funding/tipping</h3>
-			  <br />
-			  Funding address:<br />
-			  <a href="reddcoin:Rm37nXR11CXmNX3Jwqg17x9Vdj5z3ShL9f">Rm37nXR11CXmNX3Jwqg17x9Vdj5z3ShL9f</a><br />
-			  <span style="color:orange" id="balance3"></span><br />
 			  <br />
             </p>
           </div>
@@ -90,25 +84,9 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 	<script>
 	$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Flive.reddcoin.com%2Fapi%2Faddr%2FRquoC28kCNXFAT8razxNgWwQgpmRSeoUXg%22&format=json&diagnostics=true&callback=",
-          function(data) {console.log(data)
+          function(data) {
               var balance1 = data.query.results.json.totalReceived; 
               $('#balance1').text("Funding received: "+ balance1 + " RDD");
-          }
-	);
-	</script>
-	<script>
-	$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Flive.reddcoin.com%2Fapi%2Faddr%2FRnjY3FzpTx6QcaVxCCgaWeR3eJS45ayqkQ%22&format=json&diagnostics=true&callback=",
-          function(data) {console.log(data)
-              var balance2 = data.query.results.json.totalReceived; 
-              $('#balance2').text("Funding received: "+ balance2 + " RDD");
-          }
-	);
-	</script>
-	<script>
-	$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Flive.reddcoin.com%2Fapi%2Faddr%2FRm37nXR11CXmNX3Jwqg17x9Vdj5z3ShL9f%22&format=json&diagnostics=true&callback=",
-          function(data) {console.log(data)
-              var balance3 = data.query.results.json.totalReceived; 
-              $('#balance3').text("Funding received: "+ balance3 + " RDD");
           }
 	);
 	</script>
