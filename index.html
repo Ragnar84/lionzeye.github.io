@@ -83,7 +83,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 	<script>
-	$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Flive.reddcoin.com%2Fapi%2Faddr%2FRquoC28kCNXFAT8razxNgWwQgpmRSeoUXg%22&format=json&diagnostics=true&callback=",
+	$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Flive.reddcoin.com%2Fapi%2Faddr%2FRquoC28kCNXFAT8razxNgWwQgpmRSeoUXg%3Frnd%3D"+Math.random()+"%22&format=json&diagnostics=true&callback=",
           function(data) {
               var balance1 = data.query.results.json.totalReceived; 
               $('#balance1').text("Funding received: "+ balance1 + " RDD");
